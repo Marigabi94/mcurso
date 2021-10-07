@@ -16,6 +16,10 @@ import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatCarouselModule } from '@ngbmodule/material-carousel';
+import { PerfilComponent } from './perfil/perfil.component';
+import { HcomprasComponent } from './perfil/hcompras/hcompras.component';
+import { AjustesComponent } from './perfil/ajustes/ajustes.component';
+import { CalendarioComponent } from './perfil/calendario/calendario.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -33,7 +37,7 @@ import { MatCarouselModule } from '@ngbmodule/material-carousel';
     FlexLayoutModule,
     MatCarouselModule.forRoot(),
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, PerfilComponent, HcomprasComponent, AjustesComponent, CalendarioComponent],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
