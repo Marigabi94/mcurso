@@ -1,1 +1,80 @@
-<p>perfil works!</p>
+<div
+  class="contenedor"
+  fxLayout="row"
+  fxLayout.xs="column"
+  fxLayoutAlign.xs="center start"
+  fxLayoutAlign="center center"
+>
+  <div
+    flex-order="1"
+    class="ladoizquierdo"
+    [ngStyle.xs]="{ width: '100%', 'text-align': 'center' }"
+    [ngStyle]="{ width: '20%', 'text-align': 'center' }"
+  >
+    <p>
+      <img src="assets\imagenes\1537384166448.jpg" [ngStyle]="{ width: '100px', 'border-radius': '50%' }" />
+    </p>
+
+    <h2>{{ nombre }}</h2>
+    <p>{{ profesion }}</p>
+
+    <mat-selection-list
+      #list
+      [multiple]="false"
+      (selectionChange)="onSelection($event, list.selectedOptions)"
+      [ngStyle]="{ 'text-align': 'left' }"
+      [ngStyle.xs]="{ 'text-align': 'center' }"
+    >
+      <mat-list-option *ngFor="let list of typesOfList" [value]="list">
+        {{ list }}
+      </mat-list-option>
+    </mat-selection-list>
+  </div>
+
+  <div
+    flex-order="2"
+    class="ladoderecho"
+    fxLayout="row"
+    fxLayoutAlign="start stretch"
+    [ngStyle]="{ width: '80%' }"
+    [ngStyle.xs]="{ width: '100%' }"
+  >
+    <div
+      style="height: auto; writing-mode: vertical-rl"
+      [ngStyle]="{ display: 'flex' }"
+      [ngStyle.xs]="{ display: 'none' }"
+    >
+      <mat-divider [vertical]="true"></mat-divider>
+    </div>
+
+    <app-aperfil
+      *ngIf="current_selected === 'Mi perfil'"
+      fxFill
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+    ></app-aperfil>
+    <app-hcompras
+      *ngIf="current_selected === 'Historial de compras'"
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+    ></app-hcompras>
+    <app-ajustes
+      *ngIf="current_selected === 'Cuenta'"
+      fxFill
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+    ></app-ajustes>
+    <app-calendario
+      *ngIf="current_selected === 'Calendario'"
+      fxFill
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+    ></app-calendario>
+    <app-cursos
+      *ngIf="current_selected === 'Cursos'"
+      fxFill
+      fxLayout="column"
+      fxLayoutAlign="start stretch"
+    ></app-cursos>
+  </div>
+</div>

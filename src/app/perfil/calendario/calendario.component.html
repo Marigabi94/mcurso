@@ -1,1 +1,18 @@
-<p>calendario works!</p>
+<mat-divider [ngStyle]="{ display: 'none' }" [ngStyle.xs]="{ display: 'block' }"></mat-divider>
+
+<div style="text-align: center">
+  <h2
+    class="titulo"
+    [ngStyle.xs]="{ 'font-size': '23px', 'font-weight': '500' }"
+    [ngStyle]="{ 'font-size': '30px', 'font-weight': '500' }"
+  >
+    Caledario
+  </h2>
+  <p class="subTitulo">Proximos evetos.</p>
+</div>
+
+<mat-divider></mat-divider>
+
+<div style="padding: 3%">
+  <full-calendar [options]="calendarOptions"></full-calendar>
+</div>

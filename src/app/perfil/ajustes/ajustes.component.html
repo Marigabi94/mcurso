@@ -1,1 +1,73 @@
-<p>ajustes works!</p>
+<mat-divider [ngStyle]="{ display: 'none' }" [ngStyle.xs]="{ display: 'block' }"></mat-divider>
+<div style="text-align: center">
+  <h2
+    class="titulo"
+    [ngStyle.xs]="{ 'font-size': '23px', 'font-weight': '500' }"
+    [ngStyle]="{ 'font-size': '30px', 'font-weight': '500' }"
+  >
+    Cuenta
+  </h2>
+  <p class="subTitulo">Edita la configuracion de tu cuenta y cambia tu contraseña aquí.</p>
+</div>
+<mat-divider fxFill></mat-divider>
+
+<div fxLayout="column" class="seccion-inp">
+  <h4>Correo Electrónico:</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="pat@example.com" [formControl]="email" required />
+    <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+</div>
+<mat-divider></mat-divider>
+
+<div fxLayout="column" class="seccion-inp">
+  <h4>Contraseña:</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Escribe la contraseña actual</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Escribe la contraseña nueva</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Escribe otra vez la nueva contraseña</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'" />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
+
+<mat-divider></mat-divider>
+
+<div fxLayout="column" fxLayoutAlign="center center" style="padding: 3%">
+  <button class="btn-golden" mat-button>Guardar</button>
+</div>
