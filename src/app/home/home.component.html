@@ -3,18 +3,24 @@
     <img class="banner" src="assets/imagenes/banner2.png" [ngStyle.xs]="{ width: '300px' }" />
   </p>
 
-  <div flex-order="2" [ngStyle]="{ width: '1000px' }" [ngStyle.xs]="{ width: '300px', height: '800px' }">
-    <h2 fxLayoutAlign="start start">Cursos Recientes</h2>
+  <h2 fxLayoutAlign="start start">Cursos Recientes</h2>
+
+  <div
+    flex-order="2"
+    [ngStyle]="{ width: '900px', height: '230px' }"
+    [ngStyle.xs]="{ width: '300px', height: '300px' }"
+  >
     <mat-carousel
       timings="250ms ease-in"
       [autoplay]="true"
       [interval]="5000"
       color="primary"
       maxWidth="auto"
-      proportion.xs="100"
+      [proportion]="25"
+      [maintainAspectRatio]="false"
       [slides]="5"
       [loop]="true"
-      [hideArrows]="false"
+      [hideArrows]="true"
       [hideIndicators]="false"
       [useKeyboard]="true"
       [useMouseWheel]="false"
@@ -38,7 +44,7 @@
           "
         >
           <h1>Curso: {{ slide.tcurso }}</h1>
-          <button mat-flat-button color="primary" (click)="matCarouselSlide.disabled = !matCarouselSlide.disabled">
+          <button mat-flat-button class="btn-golden" (click)="matCarouselSlide.disabled = !matCarouselSlide.disabled">
             Mas información
           </button>
         </div>
