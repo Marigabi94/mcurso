@@ -9,7 +9,7 @@
     flex-order="1"
     class="ladoizquierdo"
     [ngStyle.xs]="{ width: '100%', 'text-align': 'center' }"
-    [ngStyle]="{ width: '20%', 'text-align': 'center' }"
+    [ngStyle]="{ width: '20%', 'text-align': 'center', 'align-self': 'flex-start' }"
   >
     <p>
       <img src="assets\imagenes\1537384166448.jpg" [ngStyle]="{ width: '100px', 'border-radius': '50%' }" />
@@ -41,10 +41,10 @@
   >
     <div
       style="height: auto; writing-mode: vertical-rl"
-      [ngStyle]="{ display: 'flex' }"
+      [ngStyle]="{ display: 'block' }"
       [ngStyle.xs]="{ display: 'none' }"
     >
-      <mat-divider [vertical]="true"></mat-divider>
+      <mat-divider [vertical]="true" fxFill></mat-divider>
     </div>
 
     <app-aperfil
@@ -56,6 +56,7 @@
 
     <app-hcompras
       *ngIf="current_selected === 'Historial de compras'"
+      fxFill
       fxLayout="column"
       fxLayoutAlign="start stretch"
     ></app-hcompras>
