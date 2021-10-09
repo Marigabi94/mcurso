@@ -1,0 +1,58 @@
+<mat-divider [ngStyle]="{ display: 'none' }" [ngStyle.xs]="{ display: 'block' }"></mat-divider>
+
+<div style="text-align: center">
+  <h2
+    class="titulo"
+    [ngStyle.xs]="{ 'font-size': '23px', 'font-weight': '500' }"
+    [ngStyle]="{ 'font-size': '30px', 'font-weight': '500' }"
+  >
+    Perfil público
+  </h2>
+  <p class="subTitulo">Añade información sobre ti.</p>
+</div>
+
+<mat-divider></mat-divider>
+
+<div fxLayout="column" class="seccion-inp">
+  <h4>Información básica:</h4>
+  <div fxLayout.xs="column" fxLayout="row" fxLayoutAlign="space-around center" fxLayoutAlign.xs="start stretch">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido</mat-label>
+      <input matInput />
+    </mat-form-field>
+  </div>
+</div>
+
+<mat-divider></mat-divider>
+
+<div fxLayout="column" class="seccion-inp">
+  <h4>Foto de perfil:</h4>
+  <mat-form-field>
+    <ngx-mat-file-input placeholder="Solo .jpg" [accept]="'.jpg'"></ngx-mat-file-input>
+    <mat-icon matSuffix>image</mat-icon>
+  </mat-form-field>
+</div>
+
+<mat-divider></mat-divider>
+
+<div fxLayout="column" class="seccion-inp">
+  <h4>Enlaces:</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Enlace</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Enlace</mat-label>
+    <input matInput />
+  </mat-form-field>
+</div>
+
+<mat-divider></mat-divider>
+
+<div fxLayout="column" fxLayoutAlign="center center" style="padding: 3%">
+  <button class="btn-golden" mat-button>Guardar</button>
+</div>

@@ -1,0 +1,40 @@
+<mat-divider [ngStyle]="{ display: 'none' }" [ngStyle.xs]="{ display: 'block' }"></mat-divider>
+
+<div style="text-align: center">
+  <h2
+    class="titulo"
+    [ngStyle.xs]="{ 'font-size': '23px', 'font-weight': '500' }"
+    [ngStyle]="{ 'font-size': '30px', 'font-weight': '500' }"
+  >
+    Cursos
+  </h2>
+  <p class="subTitulo">Cursos suscriptos.</p>
+</div>
+
+<mat-divider fxFill></mat-divider>
+
+<div fxFill fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
+  <mat-card style="margin: 1.5% 3% 1.5% 3%" *ngFor="let card of cards | slice: lowValue:highValue">
+    <img mat-card-image [src]="card.img" alt="Card image cap" />
+
+    <mat-card-content>
+      <h4>{{ card.title }}</h4>
+
+      <p>
+        {{ card.description }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-divider></mat-divider>
+
+  <mat-paginator
+    style="margin: 1% 0 1% 0"
+    [length]="cards.length"
+    pageSize="6"
+    (page)="getPaginatorData($event)"
+    showFirstLastButtons="false"
+    [hidePageSize]="true"
+  >
+  </mat-paginator>
+</div>
