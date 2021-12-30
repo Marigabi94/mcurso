@@ -1,7 +1,17 @@
 # mcurso
-
+[![](https://img.shields.io/github/last-commit/marigabi94/mcurso?style=plastic&logo=github&logoColor=white&labelColor=101010)]()</br>
 This project was generated with [ngX-Rocket](https://github.com/ngx-rocket/generator-ngx-rocket/)
 version 10.0.0
+
+[![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white&labelColor=101010)]()
+[![Typescript](https://img.shields.io/badge/Typescritp-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=101010)]()
+[![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)]()
+[![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)]()
+[![Material](https://img.shields.io/badge/Material-EE729B?style=for-the-badge&logo=materialdesign&logoColor=white&labelColor=101010)]() </br>
+
+# Demo
+[![Web](https://img.shields.io/badge/Web-mcurso-3DCBC2?style=for-the-badge&logo=dev.to&logoColor=white&labelColor=101010)](https://marigabi94.github.io/mcurso/home)
+
 
 # Getting started
 
