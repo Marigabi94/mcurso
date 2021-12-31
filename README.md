@@ -8,6 +8,7 @@ version 10.0.0
 [![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white&labelColor=101010)]()
 [![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white&labelColor=101010)]()
 [![Material](https://img.shields.io/badge/Material-EE729B?style=for-the-badge&logo=materialdesign&logoColor=white&labelColor=101010)]() </br>
+[![VS](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white&labelColor=101010)]()</br>
 
 # Demo
 [![Web](https://img.shields.io/badge/Web-mcurso-3DCBC2?style=for-the-badge&logo=dev.to&logoColor=white&labelColor=101010)](https://marigabi94.github.io/mcurso/home)
